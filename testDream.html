@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>测试dream.js</title>
+
+<style>
+.big{ font-size:20px;}
+.red{ color:red}
+.size{ width:100px; height:10px}
+li{ list-style:none; height:20px; width:30px; background:#eee}
+li.cur{ background:#f00}
+</style>
+<script type="text/javascript" src="dream.js"></script>
+<script type="text/javascript">
+
+//window.onload 启动测试
+window.onload=function(){
+dream.dom.hide('dd');
+
+dream.dom.addClass('dd','big red dd');
+
+dream.string.trim('d');
+
+dream.dom.remove('hei');
+
+alert($dom.width('size'));
+
+alert($page.viewHeight());
+
+alert(dream.dom.getParent('span').id);
+
+var oDiv=dream.g('hei');
+
+dream.events.on(oDiv,'mouseover',function(){alert('heihei')});
+
+alert($dom.getStyle('size','height'));
+
+input.value=dream.string.randNum(1,3);
+
+dream.page.loadCss('');
+
+dream.page.loadJs('');
+
+dream.object.extend(target,{})
+
+var oParent=dream.g('');
+
+dream.dom.bg('result','#000');
+
+alert(dream.number.numberFormat(4567890));
+
+dream.dom.css(input,'border','#f00 1px solid');
+
+alert(dream.number.pad(-55,3));
+}
+</script>
+</head>
+
+<body>
+ <button onclick="$dom.toogle('dd')">d</button>
+  <div id="dd">dfa0sdf</div>
+  <div id="hei">hei</div>
+  <div id="size"  class="size"><span id="span"></span></div>
+  <input id="input" type="text" />
+  <div id="result"></div>
+  <div id="parent"><div class="son"></div></div>
+</body>
+</html>
